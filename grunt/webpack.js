@@ -17,6 +17,8 @@ module.exports = {
       publicPath: 'public/'
     },
 
+    mode: 'production',
+
     plugins: [
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',

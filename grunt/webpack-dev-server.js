@@ -23,6 +23,7 @@ webpackConfig.module.rules.push({
 
 module.exports = {
   options: {
+    mode: 'development',
     port,
     inline: true, // reload on change
     webpack: webpackConfig,

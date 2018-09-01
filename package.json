@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "node-pre-gyp": "^0.11.0"
+    "lodash": "^4.17.10",
+    "node-pre-gyp": "^0.11.0",
+    "open": "0.0.5",
+    "webpack-dev-middleware": "^3.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -35,7 +38,7 @@
     "grunt-open": "^0.2.3",
     "grunt-sass-lint": "^0.2.4",
     "grunt-shell": "^2.1.0",
-    "grunt-webpack": "^3.0.2",
+    "grunt-webpack": "^3.1.2",
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.6.0",
     "html-loader": "^0.5.5",
@@ -47,7 +50,8 @@
     "style-loader": "^0.20.3",
     "time-grunt": "^1.4.0",
     "url-loader": "^1.0.1",
-    "webpack": "^3.5.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.7"
   }
 }

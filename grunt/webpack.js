@@ -21,8 +21,11 @@ module.exports = {
 
     plugins: [
       new webpack.optimize.CommonsChunkPlugin({
+        async: true,
         name: 'vendor',
-        minChunks: Infinity
+        minChunks: module => {
+          return module.resource && /react|angluar|lodash/.test(module.resource)
+        }
       }),
       new webpack.ProvidePlugin({
         $: 'jquery',
@@ -40,6 +43,11 @@ module.exports = {
           query: {
             presets: ['env']
           }
+        },
+        {
+          test: /\.special\.json$/,
+          type: 'javascript/auto',
+          use: 'special-loader'
         },
         {
           test: /\.css$/,
@@ -99,5 +107,9 @@ module.exports = {
     failOnError: true,
     watch: false,
     keepalive: false
+  },
+
+  optimization: {
+    runtimeChunk: true
   }
 }

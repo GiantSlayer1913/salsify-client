@@ -7,7 +7,7 @@ curl "https://app.salsify.com/api/v1/products/${ID}" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "comment": {
-      "SKU": "'${ID}'",
+      "SKU": "'${SKU}'",
       "Item Name": "'${Item_Name}'",
       "Brand": "'${Brand}'",
       "Color": "'${Color}'",
